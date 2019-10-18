@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faculty Registration page</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+    <body>
+        <div class="main">
+            <div class="container">
+                <form action="/faculty/apply" method="POST" class="appointment-form form-group" id="appointment-form" enctype="multipart/form-data">
+                    <h2>Leave Application Form</h2>
+                    <div class="form-group-1">
+                        <input type="text" name="Uid" class="form-control" id="title" placeholder="User ID" required />
+                        <input type="text" class="form-control" name="Name" id="name" placeholder="Faculty Name" required />
+                        <input type="file" name="fileToUpload" class="form-control" id="fileToUpload" required />
+                        <label for="DateFrom">From: </label>
+                        <input id="DateFrom" name="DateFrom" type="date" class="form-control" required/>
+                        <label for="DateTo">To:</label>
+                        <input id="DateTo" name="DateTo" type="date" class="form-control" required/>
+                        <div class="select-list">
+							<select name="Tol" class="form-control">
+								<option value="">Type of Leave</option>
+								<option value="OD">OD</option>
+								<option value="OE">OE</option>
+								<option value="OED">OED</option>
+								<option value="NORMAL">NORMAL</option>
+							</select>			
+						</div>
+                        <div class="select-list">
+                            <select name="course_type" class="form-control" id="course_type">
+                                <option slected value="">Course Type</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Basic Science">Basic Science</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input type="button" name="add" onclick="addRow();" value="Assign Faculty"/>
+					<output name="val" id="val" for="">1</output>
+					<input type="hidden" id="facnum" name="facnum" value=1>
+					<div class="wrapper">
+                    	<table style="width: 100%;" id="data_table">
+                    		<tr >
+                    			<th>FacultyID</th>
+                    			<th>Time From</th>
+                    			<th>Time To</th>
+                    			<th>Date</th>
+							</tr>
+                    		<tr>
+                    			<td><input type="text" name="row1uid"></td>
+                    			<td><input type="Time" name="row1timefrom"></td>
+                    			<td><input type="Time" name="row1timeto"></td>
+                    			<td><input type="Date" name="row1date"></td>
+                    		</tr>
+                    	</table>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" name="submit" id="submit" class="submit" value="Apply Leave" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="../javascript/leaveApply.js"></script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faculty Registration page</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styleRegister.css">
+</head>
+    <body>
+        <div class="main">
+            <div class="container">
+                <form action="/faculty/hod/registration" method="POST" class="appointment-form" id="appointment-form" enctype="multipart/form-data">
+                    <h2>New Faculty Registration </h2>
+                    <%- include("messages") -%>
+                    <div class="form-group-1">
+                        <input type="text" name="Uid" id="title" placeholder="User ID" required />
+                        <input type="text" name="Name" id="name" placeholder="Faculty Name" required />
+                        <input type="file" name="fileToUpload" id="fileToUpload" required />
+                        <input type="email" name="Email" id="email" placeholder="Faculty Email" required />
+                        <input type="tel" name="Phone" id="phone_number" placeholder="Faculty Phone number" required />
+                        <input type="text" name="Description" id="description" placeholder="Faculty Description" required />
+                        <input type="password" name="Password" id="Password" placeholder="Faculty Password" required />
+                        <input type="password" name="Repassword" id="Repassword" placeholder="Re-enter Password" required />
+                        <div class="select-list">
+                            <select name="course_type" id="course_type">
+                                <option slected value="">Course Type</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Basic Science">Basic Science</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <input type="submit" name="submit" id="submit" class="submit" value="Add new Faculty" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

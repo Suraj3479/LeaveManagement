@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Leave Management</title>
+    <title>Documentelete faculty</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+	
 <body>
+    <div class="container">
+        <div>
+            <form action="/faculty/hod/delete" method="POST">
+                <input type="text" name="userID" placeholder="enter the userID">
+                <button type="submit" class="btn btn-danger" name="submit" value="delete faculty"> delete</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
