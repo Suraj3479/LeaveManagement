@@ -1,0 +1,66 @@
+body {
+    font-size: 13px;
+    line-height: 1.8;
+    background: red;
+    color: #fff;
+    background-image: url("../images/body-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-position: center center;
+    font-weight: 400;
+    font-family: 'Roboto Slab';
+    margin: 0px; 
+}
+#cont{
+    max-width: 50%;
+    margin: 0 auto 0 auto;
+}
+.in{
+    margin: 10px auto 10px auto;
+}
+.select-list{
+    margin: 10px auto 10px auto;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "Muli-Bold";
+    text-align: center;
+    margin-bottom: 32px;
+    color:white;
+    letter-spacing: 2px;
+}
+#wrapper{
+    width: 100%;
+}
+#data_table{
+    table-layout:fixed;
+    width: 100%;
+    overflow: hidden;
+}
+#data_table tr td{
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 0 3.3% 0 3.3%;
+    width: 20%;
+}
+#data_table tr td:first-child{
+    padding-left: 0%;
+}
+#data_table tr td:last-child{
+    padding-right: 0%;
+}
+#data_table tr td input{
+    width: 100%;
+    text-align: center;
+}
+input:hover{
+    background-color: whitesmoke;
+}
+select:hover{
+    background-color: whitesmoke;
+}

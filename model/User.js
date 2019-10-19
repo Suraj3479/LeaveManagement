@@ -17,6 +17,7 @@ const facultySchema={
     Phone:Number,
     Leaves:Number,
     Photo:String,
+    Status:String,
     Leave:[{
         Proof:String,
         From:Date,

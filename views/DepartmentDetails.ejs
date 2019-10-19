@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/DepartmentDetails.css">
+</head>
+<header>
+    <img class ="logo" src="http://www.successvenue.co.in/images/colleges/c8ccf-252_logo.png" alt="logo" height='100' width='200'>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="#">APPLY</a></li>
+            <li><a href="#" aria-disabled="true">STATUS</a></li>
+            <li><a href="#"aria-disabled="true">LEAVE DB</a></li>
+            <li><a href="#">DEPT REPORT</a></li>
+        </ul>
+        <a class="cta" href="/faculty/logout"><button>Log Out</button></a>
+        <a class="cta" href="/faculty/hod/registration"><button>Add new Faculty</button></a>
+        <a class="cta" href="/faculty/hod/"><button>Home</button></a>
+    </nav>
+</header>
+<body>
+    <% arr.forEach(function(i){ %>
+        <div class="xyz">
+                <% val="/images/"+[i.Photo]; %>
+            <div class="second_img"><img src=<%= val %> width="180px" height="180px" alt=<%= val %>>
+            </div>
+            <div class="second_outer">
+                <div class="second_inner">
+                    <p>Name:  <%= i.Name %></p>
+                    <p>FacultyID:  <%= i.UID %></p>
+                    <p>Email:  <%= i.Email %></p>
+                    <p>Phone_num:  <%= i.Phone %></p>
+                    <p>Status:  <%= i.Status %></p>
+                </div>
+            </div>
+        </div>
+   <% }); %>
+	
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

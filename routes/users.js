@@ -105,6 +105,7 @@ router.post("/hod/registration",uploads,function(req,res){
                     Phone:req.body.Phone,
                     Leaves:2,
                     Photo:req.file.filename,
+                    Status:"On Duty",
                     Leave:[]
                 });
                 if(fac1.Password===req.body.Repassword){
@@ -146,6 +147,14 @@ router.post("/hod/delete",function(req,res){
         fs.unlinkSync('./public/images/'+userimg);
         req.flash('success_msg','Faculty successfully deleted')
         res.redirect('/faculty/hod');
+    });
+});
+
+router.get("/hod/deptDetail",ensureAuthenticated,function(req,res){
+    Faculty.find({Department:"Computer Science", Designation: { $ne: "HOD" } },function(err,results){
+        if(err) throw err;
+        console.log(results[1].Photo);
+        res.render("DepartmentDetails",{arr:results});
     });
 });
 

@@ -40,6 +40,7 @@ const Faculty = require(__dirname +'/model/User.js');
 //                 Phone:1234567890,
 //                 Leaves:2,
 //                 Photo:"xyz",
+//                 Status:"On Duty",
 //                 Leave:[]
 //             });
 //             bcrypt.genSalt(10,function(err,salt){
